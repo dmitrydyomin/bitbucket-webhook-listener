@@ -1,0 +1,18 @@
+[Service]
+ExecStart=/usr/bin/node /home/.../deployer/index.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=deployer
+User=
+Group=
+Environment=NODE_ENV=production
+Environment=TELEGRAM_BOT_TOKEN=
+Environment=TELEGRAM_CHAT_ID=
+Environment=SCRIPTS_DIR=
+Environment=SCRIPTS_EXT=
+Environment=PORT=
+Environment=IP_RANGE=104.192.143.0/24
+
+[Install]
+WantedBy=multi-user.target
