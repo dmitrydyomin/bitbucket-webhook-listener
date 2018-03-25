@@ -16,7 +16,7 @@ const sendMessage = message => bot.sendMessage(botChatID, message);
 const scriptsDir = process.env.SCRIPTS_DIR;
 const scriptsExt = process.env.SCRIPTS_EXT;
 
-const ipRange = process.env.IP_RANGE;
+const ipRange = (process.env.IP_RANGE || '').split(',').map(ip => ip.trim());
 
 const app = express();
 const port = process.env.PORT || 3000;
